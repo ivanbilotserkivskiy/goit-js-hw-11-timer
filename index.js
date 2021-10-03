@@ -1,9 +1,3 @@
-// const daysRef = document.querySelector("[data-value='days']")
-// const hoursRef = document.querySelector("[data-value='hours']")
-// const minsRef = document.querySelector("[data-value='mins']")
-// const secsRef = document.querySelector("[data-value='secs']") 
-// const divRef = document.querySelector('#id')
-
 class CountdownTimer {
   constructor({selector,targetDate}) {
     this.selector = selector
@@ -17,7 +11,6 @@ class CountdownTimer {
       const deltaTime = this.targetDate-currentTime;
       const timeComponents = getTimeComponents(deltaTime)
       updateClock(timeComponents);
-      console.log(timeComponents)
       
     }, 1000);
 
@@ -25,9 +18,8 @@ class CountdownTimer {
 const hoursRef = document.querySelector("[data-value='hours']")
 const minsRef = document.querySelector("[data-value='mins']")
 const secsRef = document.querySelector("[data-value='secs']") 
-const divRef = document.querySelector('.timer')
+const divRef = document.querySelector(`${this.selector}`)
 console.log(divRef)
-divRef.setAttribute('id', this.selector)
     function pad(value) {
       return String(value).padStart(2,'0');
     }
@@ -50,6 +42,6 @@ divRef.setAttribute('id', this.selector)
   }
 
 new CountdownTimer({
-  selector: '#timer-2',
+  selector: '#timer-1',
   targetDate: new Date('January 1, 2022'),
 }).start();
