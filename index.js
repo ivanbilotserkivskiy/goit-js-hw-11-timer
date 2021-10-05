@@ -14,12 +14,12 @@ class CountdownTimer {
       
     }, 1000);
 
-    const daysRef = document.querySelector("[data-value='days']")
-const hoursRef = document.querySelector("[data-value='hours']")
-const minsRef = document.querySelector("[data-value='mins']")
-const secsRef = document.querySelector("[data-value='secs']") 
-const divRef = document.querySelector(`${this.selector}`)
-console.log(divRef)
+    const daysRef = document.querySelector(`${this.selector} [data-value='days']`)
+const hoursRef = document.querySelector(`${this.selector} [data-value='hours']`)
+const minsRef = document.querySelector(`${this.selector} [data-value='mins']`)
+const secsRef = document.querySelector(`${this.selector} [data-value='secs']`) 
+
+
     function pad(value) {
       return String(value).padStart(2,'0');
     }
